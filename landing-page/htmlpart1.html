@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript">  
+		function matchpass(){  
+		var firstpassword=document.f1.password.value;  
+		var secondpassword=document.f1.password2.value;  
+		  
+		if(firstpassword==secondpassword){  
+		return true;  
+		}  
+		else{  
+		alert("password must be same!");  
+		return false;  
+		}  
+		}  
+		</script>  
+	
+</head>
+
+<body>
+
+	<div class="container"> 
+		<div class="title">Registration</div>
+		<div class="content">
+			<form name="f1" action="register.jsp" onsubmit="return matchpass()" method="post" action="con.php">  
+				
+				 
+				<div class="user-details">
+					<div class="input-box">
+						<span class="details">First Name</span>
+						<input type="text" placeholder="Enter your first name" id="firstname" name="firstname" required>
+					</div>
+					<div class="input-box">
+						<span class="details">Last name</span>
+						<input type="text" placeholder="Enter your last name" id="lastname" name="lastname" required>
+					</div>
+					<div class="input-box">
+						<span class="details">Email</span>
+						<input type="email" placeholder="name@example.com" id="Email" name="Email" required>
+					</div>
+					<div class="input-box">
+						<span class="details">Phone Number</span>
+						<input type="number" placeholder="Enter your number" id="PhoneNumber" name="PhoneNumber" required>
+					</div>
+					<div class="input-box">
+						<span class="details">Password</span>
+						<input type="password" placeholder="Enter your password" id="password" name="password" required>
+					</div>
+					<div class="input-box">
+						<span class="details">Re-Enter Password</span>
+						<input type="password" placeholder="Re-Enter password" id="password2" name="password2" required>
+					</div>
+				</div>
+				<p>By clicking Register, you agree on our <a href="#">terms and condition</a>.</p>
+				<div class="button">
+					<input type="submit" value="Register">
+				</div>
+			</form>
+		</div>
+	</div>
+
+</body>
+
+</html>
