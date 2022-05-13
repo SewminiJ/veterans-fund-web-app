@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+      <link rel="stylesheet" href="create-user-styles.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script type="text/javascript">  
+      function matchpass(){  
+        var firstpassword = document.f1.password.value;  
+        var secondpassword=document.f1.password2.value;  
+        var Personal_Number=document.f1.Personal_Number.value;  
+        var NaIC=document.f1.NaIC.value;  
+
+          
+        if(firstpassword != secondpassword){   
+          alert("password must be same!");  
+          return false;  
+        } 
+        if (Personal_Number.length != 10){ 
+          alert("Personal Number should be 10 numbers!");  
+          return false;  
+        } 
+        if (NaIC.length != 10){ 
+          alert("NIC should be 10 numbers!");  
+          return false;  
+        } 
+
+        return true  
+      }  
+    </script>  
+  </head>
+<body>
+ 
+    <div class="container">
+      <div class="title">Registration <span>Form</span></div>
+    <div class="content">
+      <form name="f1" onsubmit=" matchpass()" method="post" action="ct.php">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <input type="text" placeholder="Enter your name" id="full_name" name = "full_name" required="true" />
+          </div>
+          <div class="input-box">
+            <span class="details">Service Number</span>
+            <input type="number" placeholder="Enter your Service Number" id="Service_Number" name = "Service_Number" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="email" placeholder="name@example.com" id="Email" name = "Email" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Age Of Retirement</span>
+            <input type="number" placeholder="Enter your Age Of Retirement" id="Age_Of_Retirement"  name = "Age_Of_Retirement" required>
+          </div>
+		  <div class="input-box">
+            <span class="details">Personal Number</span>
+            <input type="number" placeholder="Enter your Personal Number" id="Personal_Number" name = "Personal_Number" maxlength="10" minlength="10" required>
+          </div>
+		  <div class="input-box">
+            <span class="details">Date Of Birth</span>
+            <input type="date" placeholder="Enter your Date Of Birth" id="Date_Of_Birth" name = "Date_Of_Birth" required>
+          </div>
+		  <div class="input-box">
+            <span class="details">Annual salary</span>
+            <input type="number" placeholder="Enter your Annual salary" id="Annual_salary" name = "Annual_salary" required>
+          </div>
+		  <div class="input-box">
+            <span class="details">NIC</span>
+            <input type="text" placeholder="Enter your NIC" id="NaIC"  name = "NaIC" required>
+          </div>
+		  <div class="input-box">
+            <span class="details">Office Address</span>
+            <input type="text" placeholder="Enter your Office Address" id="Office_Addres" name = "Office_Addres" required>
+          </div>
+		  <div class="input-box">
+            <span class="details">Personal Allowances</span>
+            <input type="number" placeholder="Enter your Personal Allowances" id="Personal_Allowances" name = "Personal_Allowances" required>
+          </div>
+          <div class="input-box">
+						<span class="details">Password</span>
+						<input type="password" placeholder="Enter your password" id="password" name="password" required>
+					</div>
+          <div class="input-box">
+						<span class="details">Re-Enter Password</span>
+						<input type="password" placeholder="Re-Enter password" id="password2" name="password2" required>
+					</div>
+          <div class="gender-details">
+            <input type="radio" name="gender" id="dot-1">
+            <input type="radio" name="gender" id="dot-2">
+            <input type="radio" name="gender" id="dot-3">
+            <span class="gender-title">Gender</span>
+            <div class="category">
+                <label for="dot-1">
+                    <span class="dot one"></span>
+                    <span class="gender">Male</span>
+                </label>
+                <label for="dot-2">
+                    <span class="dot two"></span>
+                    <span class="gender">Female</span>
+                </label>
+                <label for="dot-3">
+                    <span class="dot three"></span>
+                    <span class="gender">Other</span>
+                </label>
+            </div>
+          </div>
+          
+        </div>
+        <p>By clicking Register, you agree on our <a href="#">terms and condition</a>.</p>
+        <div class="button">
+          <input type="submit" name="submit" value="Submit The Form">
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
+

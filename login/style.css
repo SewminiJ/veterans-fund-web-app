@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root{
+    --yellow:#FFC900;
+    --black:#040e27;
+    --light-color:#666;
+    --bg-color:#ececec;
+    --box-shadow:.4rem .4rem 1rem #ccc,
+                -.4rem -.4rem 1rem #fff;
+    --box-shadow-inset:.4rem .4rem 1rem #ccc inset,
+                -.4rem -.4rem 1rem #fff inset;   
+}
+
+*{
+	padding:0px;
+	margin:0px;
+	box-sizing:border-box;
+}
+body{
+	background-image: url(back.jpg);
+	background-repeat: no-repeat;
+	overflow: hidden;
+	background-size: cover;
+    font-family: 'Nunito', sans-serif;
+	
+}
+
+h2{
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 1.5rem 2rem;
+    color: var(--light-color);
+}
+
+a{
+    text-decoration:none;
+    font-weight:600px;
+    color:var(--yellow);
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+p{
+    margin:5px 0;
+    color:white;
+    font-size: 1.25rem; 
+}
+
+.main{
+	width: 600px;
+	height:fit-content;
+	margin:7% auto;
+	border-radius: 50px;
+	background-color: rgba(0,0,0,0.5);
+	box-shadow: 0 0 17px #333;
+}
+
+.secondmain{
+	padding:75px;
+}
+
+.link{
+	color:var(--yellow);
+}
+
+.header h2{
+	color:var(--yellow);
+	font-size: 45px;
+}
+
+.header h3{
+	color:var(--yellow);
+    font-size: 1.8rem;
+}
+
+.header2 h3{
+	color:var(--yellow);
+    font-size: 1.8rem;
+}
+
+.forget{
+	float:right;
+
+}
+
+input{
+	padding: 1rem 1.5rem;
+    width: 100%;
+    background: #ffffff;
+    color: var(--black);
+    font-size: 1.25rem;
+    text-transform: none;
+    margin: .7rem 0;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow-inset);
+    border: none;
+}
+
+input:focus
+{
+    outline:none;
+}
+
+input[type="submit"]{
+	display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
+    border: 0.1rem solid var(--yellow);
+    border-radius: 0.5rem;
+    background: var(--yellow);
+    color: var(--black);
+    cursor: pointer;
+    text-transform: capitalize;
+    transition: all 0.2s ease-in-out;
+    box-shadow: none;
+}
+
+input[type="submit"]:hover{
+    background: var(--black);
+    color: var(--yellow);
+}
+
+input[type="email"]{
+	margin-top:50px;
+}	
+
+.checkbox{
+    padding: 1rem 1.5rem;
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    color: var(--black);
+    font-size: 1.25rem;
+    text-transform: none;
+    margin: 0;
+    border-radius: 5px;
+    box-shadow: none;
+    outline: none;
+}
