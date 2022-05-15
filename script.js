@@ -63,3 +63,15 @@ function sendEmail() {
       document.getElementById("message").value,
   }).then((message) => alert("Thank you! Your Mail Sent successfully!"));
 }
+
+let button = document.querySelector("body .container-card a");
+button.addEventListener("click", ()=>{
+  const span = document.querySelector("a span");
+  button.style.paddingRight = "10px";
+  span.style.visibility = "visible";
+  setTimeout(() => {
+    span.style.visibility = "hidden";
+    button.style.transistion = ".3s ease-in-out";
+    button.style.paddingRight = "0px";
+  }, 3000);
+})

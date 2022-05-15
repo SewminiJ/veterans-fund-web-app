@@ -712,6 +712,18 @@ footer{
     text-decoration: underline;
 }
 
+.footer-privacy span a{
+    text-align: center;
+    width: 100%;
+    color: #fff !important;
+    margin-bottom: 25px;
+}
+
+.footer-privacy span a:hover{
+    color: rgb(217, 217, 217);
+    text-decoration: underline;
+}
+
 .share{
     padding-top: 0.5rem;
     padding-right: .5rem;

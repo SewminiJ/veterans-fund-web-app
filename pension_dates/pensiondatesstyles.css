@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  table.center {
+    margin-left: auto; 
+    margin-right: auto;
+  }
+  
+
+table, th, td  {
+    box-sizing: border-box;
+    text-align: center;
+    width: 300px;
+    height: 10px;
+    padding: 10px;  
+    border: 2px solid rgb(255, 252, 252);
+    box-shadow: 5px 10px 8px 10px #e9e8e4;
+}
+  
+
+h1 {
+    text-align: center;
+  }
+ 

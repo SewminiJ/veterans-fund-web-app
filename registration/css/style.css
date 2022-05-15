@@ -18,19 +18,19 @@ body{
 }
 
 *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .container{
-  max-width: 1400px;
-  width: 100%;
-  margin: 0 auto;
-  background-color: var(--bg-color);
-  padding: 25px 30px;
-  border-radius: 5px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--bg-color);
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
 }
 
 .container .title{
@@ -45,22 +45,22 @@ body{
     color: var(--yellow)
 }
 .content form .user-details{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 20px 0 12px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
 }
 
 form .user-details .input-box{
-  margin-bottom: 15px;
-  width: calc(100% / 2 - 20px);
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
 }
 
-form .input-box span.details{
-  display: block;
-  font-weight: 500;
-  margin-bottom: 5px;
-  font-size: 1.25rem;
+form .input-box .details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 1.25rem;
 }
 
 .user-details .input-box input{
@@ -77,65 +77,137 @@ form .input-box span.details{
     border: none;
 }
 
+.user-details .input-box select{
+    padding: 1rem 1.5rem;
+    width: 100%;
+    background: none;
+    color: var(--black);
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.2rem;
+    text-transform: none;
+    margin: .7rem 0;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    border: none;
+}
+
+.user-details .input-box select:focus,
+.user-details .input-box select:valid{
+    outline: none;
+    box-shadow: var(--box-shadow-inset) !important;
+}
+
+.user-details .input-box select option{
+    margin-bottom: 20px;
+}
+
 .user-details .input-box input:focus,
 .user-details .input-box input:valid{
     outline: none;
     box-shadow: var(--box-shadow-inset) !important;
 }
 
- form .gender-details .gender-title{
-  font-size: 20px;
-  font-weight: 500;
- }
+form .gender-details .gender-title{
+    font-size: 20px;
+    font-weight: 500;
 
- form .gender-details span{
-    font-size: 16px;
- }
- 
- form .category{
-   display: flex;
-   width: 80%;
-   margin: 14px 0 ;
-   justify-content: space-between;
- }
+}
 
- form .category label{
-   display: flex;
-   align-items: center;
-   cursor: pointer;
- }
+form .gender-details span{
+    font-size: 18px;
+}
 
- form .category label .dot{
-  height: 18px;
-  width: 18px;
-  border-radius: 50%;
-  margin-right: 10px;
-  background: #d9d9d9;
-  border: 5px solid transparent;
-  transition: all 0.3s ease;
-  font-size: 1.25rem;
+form .marital-details .marital-title{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+form .marital-details span{
+    font-size: 18px;
+}
+
+form .pension-details .pension-title{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+form .pension-details span{
+    font-size: 18px;
+}
+
+form .computer-details .computer-title{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+form .computer-details span{
+    font-size: 18px;
+}
+
+form .category{
+    width: 100% !important;
+    display: flex;
+    margin: 40px 0;
 }
 
 form .category label{
-    margin-right: 25px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
 }
 
- #dot-1:checked ~ .category label .one,
- #dot-2:checked ~ .category label .two,
- #dot-3:checked ~ .category label .three{
-   background: #010101;
-   border-color: #d9d9d9;
- }
+form .category label .dot{
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background: #d9d9d9;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+    font-size: 1.25rem;
+}
 
- form input[type="radio"]{
-   display: none; 
- }
+form .category label{
+    margin-right: 40px;
+}
 
- .button{
-     text-align: center;
- }
+#dot-gender-male:checked ~ .category label .one,
+#dot-gender-female:checked ~ .category label .two,
+#dot-gender-other:checked ~ .category label .three{
+background: #010101;
+border-color: #d9d9d9;
+}
 
- form .button input{
+#dot-marital-married:checked ~ .category label .one,
+#dot-marital-unmarried:checked ~ .category label .two,
+#dot-marital-divorced:checked ~ .category label .three,
+#dot-marital-widowed:checked ~ .category label .four{
+background: #010101;
+border-color: #d9d9d9;
+}
+
+#dot-pension-bank:checked ~ .category label .one,
+#dot-pension-post:checked ~ .category label .two{
+background: #010101;
+border-color: #d9d9d9;
+}
+
+#dot-computer-yes:checked ~ .category label .one,
+#dot-computer-no:checked ~ .category label .two{
+background: #010101;
+border-color: #d9d9d9;
+}
+
+
+form input[type="radio"]{
+display: none; 
+}
+
+.button{
+    text-align: center;
+}
+
+form .button input{
     display: inline-block;
     margin-top: 1rem;
     padding: 1rem 3rem;
@@ -148,18 +220,32 @@ form .category label{
     text-transform: capitalize;
     transition: all 0.2s ease-in-out;
     width: 60%;
- }
+}
 
- form .button input:hover{
+form .button input:hover{
     background: var(--black);
     color: var(--yellow);
- }
+}
 
- p{
-     font-size: 20px;
- }
+p{
+    font-size: 20px;
+}
 
- @media(max-width: 584px){
+.radio-tags{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+
+.gender-marital, .iwould-details{
+    width: 100% !important;
+}
+
+.iwould-details{
+    margin-left: 40px;
+}
+
+@media(max-width: 584px){
     .container{
         max-width: 100%;
     }

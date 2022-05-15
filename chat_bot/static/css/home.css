@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika&display=swap');
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Signika', sans-serif;
+}
+
+body {
+    margin: 0 auto;
+    background-color: #222;
+}

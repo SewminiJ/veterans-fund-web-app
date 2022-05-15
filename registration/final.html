@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+<link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript">  
+      function matchpass(){  
+        var firstpassword = document.f1.password.value;  
+        var secondpassword=document.f1.password2.value;  
+        var Personal_Number=document.f1.Personal_Number.value;  
+        var NIC=document.f1.NIC.value;  
+
+        if(firstpassword != secondpassword){   
+          alert("password must be same!");  
+          return false;  
+        } 
+        if (Personal_Number.length != 10){ 
+          alert("Personal Number should be 10 numbers!");  
+          return false;  
+        } 
+        if (NIC.length != 10){ 
+          alert("NIC should be 10 numbers!");  
+          return false;  
+        } 
+        return true; 
+      }  
+    </script>  
+  </head>
+<body>
+
+  <div class="container">
+    <h1 class="title">Registration Form</h1>
+    
+    <div class="content">
+      <form name="f1" onsubmit="return matchpass()" method="post" action="ct.php">
+        <div class="user-details">
+          <div class="input-box">
+            <label class="details" for="details">Category of Armed Forces:</label>
+
+            <select name="coaf" id="coaf">
+              <option value="army">Army</option>
+              <option value="navy">Navy</option>
+              <option value="air_force">Air Force</option>
+              <option value="police">Police</option>
+            </select>            
+            
+          </div>
+
+          <div class="input-box">
+            <label class="details" for="ranks">Rank:</label>
+            <select name="ranks" id="ranks">
+              <option value="General">General</option>
+              <option value="Lieutenant">Lieutenant</option>
+              <option value="Colonel">Colonel</option>
+              <option value="Admiral">Admiral</option>
+              <option value="Major">Major</option>
+              <option value="Captian">Captian</option>
+              <option value="Lieutenant Colonel">Lieutenant Colonel</option>
+              <option value="Commander">Commander</option>
+              <option value="Major General">Major General</option>
+              <option value="Second Lieutenant">Second Lieutenant</option>
+              <option value="Brigader">Brigader</option>
+              <option value="Commodore">Commodore</option>
+              <option value="Ensign">Ensign</option>
+              <option value="Office Cadet">Office Cadet</option>
+              <option value="Field Marshal">Field Marshal</option>
+              <option value="Lieutenant Commander">Lieutenant Commander</option>
+              <option value="Group captain">Group captain</option>
+              <option value="Wind Commander">Wind Commander</option>
+              <option value="Squadron Leader">Squadron Leader</option>
+              <option value="Flight Lieutenant">Flight Lieutenant</option>
+              <option value="Vice Admiral">Vice Admiral</option>
+            </select>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <input type="text" placeholder="Enter your name" id="fullname" name="fullname" required="true" />
+          </div>
+
+          <div class="input-box">
+            <span class="details">Name with Initials</span>
+            <input type="text" placeholder="Name with Initials" id="Name_with_Initials" name="Name_with_Initials" required="true" />
+          </div>
+
+          <div class="input-box">
+            <span class="details">Service Number</span>
+            <input  placeholder="Enter your Service Number" id="Service_Number" name = "Service_Number" required>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="email" placeholder="name@example.com" id="Email" name = "Email" required>
+          </div>
+
+          <div class="input-box">
+						<span class="details">Password</span>
+						<input type="password" placeholder="Enter your password" id="password" name="password" required>
+          </div>
+
+          <div class="input-box">
+						<span class="details">Confirm Password</span>
+						<input type="password" placeholder="Confirm password" id="password2" name="password2" required>
+					</div>
+
+          <div class="input-box">
+            <span class="details">Office Address</span>
+            <input type="text" placeholder="Enter your Office Address" id="Office_Addres" name = "Office_Addres" required>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Personal Address</span>
+            <input type="text" placeholder="Enter your Personal Address" id="Personal_Address" name = "Personal_Address" required>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Divisional Secretariat Division</span>
+            <input type="text" placeholder="Divisional Secretariat Division" id="DSD" name = "DSD" required>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Date Of Birth</span>
+            <input type="date" placeholder="Enter your Date Of Birth" id="Date_Of_Birth" name = "Date_Of_Birth" required>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Age Of Retirement</span>
+            <input  placeholder="Enter your Age Of Retirement" id="Age_Of_Retirement"  name = "Age_Of_Retirement" required>
+          </div>
+
+          <div class="input-box">
+            <span class="details">NIC</span>
+            <input type="text" placeholder="Enter your NIC" id="NIC"  name = "NIC" required>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Reason for Retirement</span>
+            <select name="RFR" id="RFR">
+              <option value="medical">Medical Issue</option>
+              <option value="completed">Completed Service</option>
+              <option value="personal">Personal Problem</option>
+            </select> 
+          </div>
+
+          <div class="input-box">
+            <span class="details">Personal Number</span>
+            <input type="number" placeholder="Phone: (xxx) - xxx xxxx" id="Personal_Number" name = "Personal_Number" maxlength="10" minlength="10" required>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Annual salary</span>
+            <input  placeholder="Enter your Annual salary" id="Annual_salary" name = "Annual_salary" required>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Pension Allowances</span>
+            <select name="Personal_Allowances" id="Personal_Allowances">
+              <option value="have">Having</option>
+              <option value="none">None</option>
+            </select> 
+          </div>
+
+          <div class="radio-tags">
+            <div class="gender-marital">
+              <div class="gender-details">
+                <input type="radio" name="gender" id="dot-gender-male" value="Male">
+                <input type="radio" name="gender" id="dot-gender-female" value="Female">
+                <input type="radio" name="gender" id="dot-gender-other" value="Other">
+  
+                <span class="gender-title">Gender</span>
+  
+                <div class="category">
+                  <label class="single-dot" for="dot-gender-male">
+                  <span class="dot one"></span>
+                  <span class="gender">Male</span>
+                  </label>
+  
+                  <label class="single-dot" for="dot-gender-female">
+                    <span class="dot two"></span>
+                    <span class="gender">Female</span>
+                  </label>
+  
+                  <label class="single-dot" for="dot-gender-other">
+                    <span class="dot three"></span>
+                    <span class="gender">Other</span>
+                  </label>
+                </div>
+              </div>
+  
+              <div class="marital-details">
+                <input type="radio" name="MStatus" id="dot-marital-married" value="Married">
+                <input type="radio" name="MStatus" id="dot-marital-unmarried" value="Unmarried">
+                <input type="radio" name="MStatus" id="dot-marital-divorced" value="Divorced">
+                <input type="radio" name="MStatus" id="dot-marital-widowed" value="Widowed">
+  
+                <span class="marital-title">Marital Status</span>
+                <div class="category">
+                  <label class="single-dot" for="dot-marital-married">
+                    <span class="dot one"></span>
+                    <span class="MStatus">Married</span>
+                  </label>
+  
+                  <label class="single-dot" for="dot-marital-unmarried">
+                    <span class="dot two"></span>
+                    <span class="MStatus">Unmarried</span>
+                  </label>
+  
+                  <label class="single-dot" for="dot-marital-divorced">
+                    <span class="dot three"></span>
+                    <span class="MStatus">Divorced</span>
+                  </label>
+  
+                  <label class="single-dot" for="dot-marital-widowed">
+                    <span class="dot four"></span>
+                    <span class="MStatus">Widowed</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="iwould-details">
+              <div class="pension-details">
+                <input type="radio" name="Pension" id="dot-pension-bank" value="Bank">
+                <input type="radio" name="Pension" id="dot-pension-post" value="Post Office">
+  
+                <span class="pension-title">I would like to obtain your pension</span>
+  
+                <div class="category">
+                  <label class="single-dot" for="dot-pension-bank">
+                    <span class="dot one"></span>
+                    <span class="pension">Bank</span>
+                  </label>
+  
+                  <label class="single-dot" for="dot-pension-post">
+                    <span class="dot two"></span>
+                    <span class="pension">Post Office</span>
+                  </label>
+                </div>
+              </div>
+  
+              <div class="computer-details">
+                <input type="radio" name="Computer" id="dot-computer-yes" value="Bank">
+                <input type="radio" name="Computer" id="dot-computer-no" value="Post Office">
+  
+                <span class="computer-title">I would like to obtain computer gratuity</span>
+  
+                <div class="category">
+                  <label class="single-dot" for="dot-computer-yes">
+                    <span class="dot one"></span>
+                    <span class="Pension">Yes</span>
+                  </label>
+  
+                  <label class="single-dot" for="dot-computer-no">
+                    <span class="dot two"></span>
+                    <span class="Pension">No</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div style="display: flex; align-items: center;">
+              <input type="checkbox" value="Submit" id="submit" style="margin-right: 10px; height: 20px; width: 20px;"/>
+              <p>I confirmed all above details I have provided are accurate.</p>
+            </div>
+            <p style="margin-top: 10px; margin-left: 30px;">By clicking Register, you agree on our <a href="#">terms and condition</a>.</p>
+          </div>
+        </div>
+        
+        <div class="button">
+          <input type="submit" name="submit" value="Submit The Form">
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
+
