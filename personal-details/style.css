@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+
+body {
+    color:black;
+    text-align: center;
+    height: 200px;
+    width: 100%;
+    position: relative;
+    font-family: 'Nunito', sans-serif;
+}
+
+h2 {
+    letter-spacing: 2px;
+}
+
+h3 {
+    
+    border-radius: 100%;
+
+}
+
+.upload{
+    width: 200px;
+    position: absolute;
+    left: 300px;
+    
+}
+
+.upload img{
+    border-radius: 50%;
+    border: 6px solid #eaeaea;
+}
+
+.upload.round{
+    position: absolute;
+    bottom:0;
+    right: 0;
+    background: #fff;
+    width: 30px;
+    height: 100px;
+    line-height: 5px;
+    text-align: center;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.upload.round input[type="file"]{
+    position: absolute;
+    transform: scale(2);
+    opacity: 0;
+}
+
+input[type=file]::-webkit-file-upload-button{
+    cursor: pointer;
+    
+}
+
+
+
+

@@ -27,6 +27,52 @@
 </head>
 
 <body>
+    <!-- start chat bot -->
+    <div class="chat-bar-collapsible">
+        <button id="chat-button" type="button" class="collapsible">Chat with us!
+            <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments"></i>
+        </button>
+
+        <div class="chat-content">
+            <div class="full-chat-block">
+                <!-- Message Container -->
+                <div class="outer-container">
+                    <div class="chat-container">
+                        <!-- Messages -->
+                        <div id="chatbox">
+                            <h5 id="chat-timestamp"></h5>
+                            <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
+                        </div>
+
+                        <!-- User input box -->
+                        <div class="chat-bar-input-block">
+                            <div id="userInput">
+                                <input id="textInput" class="input-box" type="text" name="msg"
+                                    placeholder="Tap 'Enter' to send a message">
+                                <p></p>
+                            </div>
+
+                            <div class="chat-bar-icons">
+                                <i id="chat-icon" style="color: crimson;" class="fa fa-fw fa-heart"
+                                    onclick="heartButton()"></i>
+                                <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send"
+                                    onclick="sendButton()"></i>
+                            </div>
+                        </div>
+
+                        <div id="chat-bar-bottom">
+                            <p></p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- end chat bot -->
+
 <section>
     <!-- header section starts      -->
     <header>
@@ -156,29 +202,34 @@
             <img src="images/check.png" alt="">
             <h2>Checking Personal <br> Details</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quas delectus, laboriosam nulla dolore in.</p>
-            <button class="item-btn">Check it</button>
+            <a href="./personal-details/index.html">
+                <button class="item-btn">Check it</button>
+            </a>
         </div>
 
         <div class="container-card">
             <img src="images/calendar.png" alt="">
             <h2>Pension Payment <br> Dates</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quas delectus, laboriosam nulla dolore in.</p>
-            <a class="register-btn" href="./pension_dates/pensiondates.html"><button class="item-btn">Take a look</button></a>
+            <a class="register-btn" href="./pension_dates/pensiondates.html">
+                <button class="item-btn">Take a look</button>
+            </a>
         </div>
 
         <div class="container-card">
             <img src="images/download.png" alt="">
             <h2>Download the <br> Application</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quas delectus, laboriosam nulla dolore in.</p>
-            <a class="register-btn" href="APPLICATION FORM for Military Leavers.pdf" download="APPLICATION FORM for Military Leavers.pdf"><span></span><button class="item-btn">Click Here</button></a>>
-
+            <a class="register-btn" href="APPLICATION FORM for Military Leavers.pdf" download="APPLICATION FORM for Military Leavers.pdf"><span></span><button class="item-btn">Click Here</button></a>
         </div>
 
         <div class="container-card">
             <img src="images/faqs.png" alt="">
             <h2>FAQ</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quas delectus, laboriosam nulla dolore in.</p>
-            <button class="item-btn">Ask me</button>
+            <a href="./faq/FAQ.html">
+                <button class="item-btn">Ask me</button>
+            </a>
         </div>
     </div>
 </section>
@@ -408,6 +459,11 @@
 <script src="script.js"></script>
 
 <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+<!-- chat bot scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="./responses.js"></script>
+<script src="./chat.js"></script>
 
 </body>
 </html>

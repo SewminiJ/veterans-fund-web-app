@@ -13,4 +13,4 @@ function getBotResponse(input) {
     } else{
         return "🤖  I'm sorry, I don't understand what you mean.🙁";
     }
-}
+}   
