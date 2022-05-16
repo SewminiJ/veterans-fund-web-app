@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ Page</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<style type="text/css">
+  /* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  background-color: #FFFFFF;
+  background-repeat: no-repeat;
+  background-size:cover;
+  width: 100%;
+  height:auto;
+}
+
+.main-title{
+  text-align: center;
+  line-height:3;
+}
+
+.container{
+  width: 75vw;
+  height:auto;
+  display:grid;
+  grid-gap:2.3rem;
+  margin: 3rem auto;
+  transition: all 0.5s ease;
+}
+
+.item{
+  width:100%;
+  height:100%;
+  padding:3px;
+  display:grid;
+  grid-template-columns:1fr auto;
+  grid-gap:2rem;
+  align-items: center;
+  border-bottom: 2px solid #000;
+}
+
+.item-content{
+  width: 100%;
+  height: 100%;
+  display:gird;
+  /* flex-direction: column; */
+  /* justify-content:center; */
+  /* align-items:center; */
+  text-align: center;
+  /* grid-gap: 0.234rem; */
+}
+
+
+.item-icon img{
+  width:60px;
+  height:60px;
+}
+
+.item-btn{
+  font-size:1.2rem;
+  margin:10px 0;
+  border:none;
+  outline:none;
+  padding:0.564rem 1.2rem;
+  border-radius:50px;
+  transition:all 1s ease;
+  background:rgb(61, 61, 61);
+  color:#fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.item-btn:hover{
+  /* background: rgb(233, 233, 233); */
+  /* color:#000; */
+  border-radius:10px;
+  transform: scale(1.2);
+}
+
+
+
+.item-title{
+  font-size:1.5rem;
+}
+
+
+footer{
+  width: 100%;
+  height: 20vh;
+  display: grid;
+  justify-content: center; /*all items in footer display center horizontally;*/
+  align-items: center;/*all items in footer display center vertivally;*/
+  text-align: center;
+    padding:2rem 0;
+}
+
+.contact-link{
+  font-size: 1.8rem;
+  font-weight: 1000;
+  text-decoration: none;
+  color: hsl(210, 3%, 12%);
+}
+
+.btn-section{
+  width: 100%;  
+  height: 100%;
+  display:flex; /*all items inside btn-section displays vertically*/
+  justify-content:space-between;
+  align-items:center;
+}
+
+.btn-item{
+  font-size: 1.4rem;
+  color: hsl(210, 3%, 12%);
+  transition:all 0.5s ease;
+}
+
+.btn-item:hover{
+  transform:scale(1.5);
+  color:rgb(129, 129, 129);
+}
+</style>
+
+<body>
+
+  <h1 class="main-title">Frequently Asked Questions</h1>
+  <div class="container">
+    <!-- container itmes -->
+    <div class="item">
+      <div class="item-icon">
+        <img src="./conversation.png" alt="icon">
+      </div>
+      <div class="item-para">
+        <h1 class="item-title">What does Veterans Fund do?</h1>
+        <p>We collect personal details of retired Verterans and the leaver gets the opportunity to exepireince with various services in one place such as checking the pension payment dates, downloading the application form, and contact us.</p>        
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-icon">
+        <img src="./conversation.png" alt="icon">
+      </div>
+      <div class="item-para">
+        <h1 class="item-title">Why should I consolidate my pension with Veterans Fund?</h1>
+        <p>Veterans fund is a service provider that specialized for retired Veterans to provide a better financial health for military leaders during the retirement for their greate service. One of the things that makes Veterans Fund different is our commitment to be there for our members and their families during their greatest time of need.</p>        
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-icon">
+          <img src="./conversation.png" alt="icon">
+      </div>
+      <div class="item-para">
+        <h1 class="item-title">How to Register with Veterans Fund?</h1>
+        <p>Go to the Registration page and fill and submit the form with the required correct details of the military leaver. Privacy and security are some major issues when sharing your personal details, so we value your privacy and security. We assure you that.</p>        
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-icon">
+        <img src="./conversation.png" alt="icon">
+      </div>
+      <div class="item-para">
+        <h1 class="item-title">How can I check and edit my personal details?</h1>
+        <p>You can go to Checking Personal Details service and login to your account. After that you can easily check and edit your personal details with our Website. </p>        
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-icon">
+        <img src="./conversation.png" alt="icon">
+      </div>
+      <div class="item-para">
+        <h1 class="item-title">What are the benifits of Veterans Fund?</h1>
+        <p>You can check pension payment dates and you will get an email notification on that dates as a Reminder, You can easily download the application form. <br>You can contact with us, if any inquiry raised. <br>You can check the Personal details and at the same time you can edit your personal details.</p>      
+      </div>
+    </div>
+
+    <!-- end of container itmes -->
+  </div>
+
+</body>
+
+</html>
