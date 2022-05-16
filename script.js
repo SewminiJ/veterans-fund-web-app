@@ -75,3 +75,23 @@ button.addEventListener("click", ()=>{
     button.style.paddingRight = "0px";
   }, 3000);
 })
+
+const search = () => {
+  const searchitem = document.getElementById("search-box").value.toUpperCase();
+  const search = document.querySelectorAll("section-container")
+  const items = document.querySelectorAll("container-card")
+  const pname = search.getElementByTagName("h2")
+
+  for (var i = 0; i < pname.length; i++) {
+    let match = items[i].getElementsByTagName("h2")[0];
+    if (match) {
+      let textvalue = match.textContent || match.innerHTML
+
+      if (textvalue.toUpperCase().indexOf(searchitem) > -1) {
+        items[i].style.display = "block";
+      } else {
+        items[i].style.display = "none";
+      }
+      }
+    }
+}

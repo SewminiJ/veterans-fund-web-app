@@ -28,9 +28,9 @@ mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
 
         $servername = "localhost";
-        $username = "pamodith";
-        $pass = "alex123";
-        $dbname = "regform";
+        $username = "root";
+        $pass = "";
+        $dbname = "db_veterans";
 
         // Create connection
         $conn = new mysqli($servername, $username, $pass, $dbname);
@@ -39,8 +39,8 @@ mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
         die("Connection failed: " . $conn->connect_error);
         }
 
-        $stmt = $conn->prepare("insert into `registration form` (coaf,ranks,fullname,Name_with_Initials,Service_Number,Email,password,Office_Addres,Personal_Address,DSD,Date_Of_Birth,Age_of_retirement,NIC,RFR,PhoneNumber,Annual_salary,Personal_Allowances,gender,MStatus,Pension,C_detail) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
-        $stmt->bind_param("sssssssssiiiisiiissss",$coaf,$ranks,$fullname,$Name_with_Initials,$Service_Number,$Email,$password,$Office_Addres,$Personal_Address,$DSD,$Date_Of_Birth,$Age_of_retirement,$NIC,$RFR,$PhoneNumber,$Annual_salary,$Personal_Allowances,$gender,$MStatus,$Pension,$C_detail);
+        $stmt = $conn->prepare("insert into `registration` (coaf,ranks,fullname,Name_with_Initials,Service_Number,Email,password,Office_Addres,Personal_Address,DSD,Date_Of_Birth,Age_Of_Retirement,NIC,RFR,PhoneNumber,Annual_salary,Personal_Allowances,gender,MStatus,Pension,C_detail) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+        $stmt->bind_param("ssssssssssiissiisssss",$coaf,$ranks,$fullname,$Name_with_Initials,$Service_Number,$Email,$password,$Office_Addres,$Personal_Address,$DSD,$Date_Of_Birth,$Age_Of_Retirement,$NIC,$RFR,$PhoneNumber,$Annual_salary,$Personal_Allowances,$gender,$MStatus,$Pension,$C_detail);
 
         $stmt->execute();
         $stmt->close();
